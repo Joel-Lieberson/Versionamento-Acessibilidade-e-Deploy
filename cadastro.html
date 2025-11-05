@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma social — HTML5 + CSS3 com design system, grid e componentes.">
+  <title>Cadastro — Instituto Futuro Melhor</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="container navbar">
+    <a class="brand" href="index.html">Instituto Futuro Melhor</a>
+    <button class="hamburger" aria-label="Abrir menu" data-burger>☰</button>
+    <nav class="menu" data-menu aria-label="Principal">
+      <a href="index.html" class="">Início</a>
+      <div class="menu-item">
+        <a href="projetos.html" class="" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
+        <div class="submenu" role="menu">
+          <a role="menuitem" href="projetos.html#mentoria">Mentoria Jovem</a>
+          <a role="menuitem" href="projetos.html#feira">Feira Solidária</a>
+          <a role="menuitem" href="projetos.html#inclusao">Inclusão Digital</a>
+        </div>
+      </div>
+      <a href="cadastro.html" class="active">Cadastro</a>
+      <a href="#" data-open-modal class="btn btn-secondary">Quero doar</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+
+<article aria-labelledby="cadastro-title">
+  <header>
+    <h1 id="cadastro-title">Cadastro de voluntários e doadores</h1>
+    <p class="note">Campos com * são obrigatórios. Seus dados serão usados apenas para fins institucionais.</p>
+  </header>
+
+  <form id="form-cadastro" novalidate>
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label class="required" for="nome">Nome completo</label>
+      <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" required minlength="3" class="form-control">
+
+      <label class="required" for="email">E-mail</label>
+      <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required class="form-control">
+
+      <label class="required" for="cpf">CPF</label>
+      <input id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" 
+             required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" aria-describedby="cpf-hint" class="form-control">
+      <div id="cpf-hint" class="note">Formato: 000.000.000-00</div>
+
+      <label class="required" for="telefone">Telefone</label>
+      <input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(00) 00000-0000"
+             required pattern="\(\d{2}\)\s\d{4,5}-\d{4}" aria-describedby="tel-hint" class="form-control">
+      <div id="tel-hint" class="note">Aceita 8 ou 9 dígitos no número.</div>
+
+      <label class="required" for="nascimento">Data de Nascimento</label>
+      <input id="nascimento" name="nascimento" type="date" required class="form-control">
+    </fieldset>
+
+    <fieldset>
+      <legend>Endereço</legend>
+      <label class="required" for="endereco">Endereço</label>
+      <input id="endereco" name="endereco" type="text" placeholder="Rua, número e complemento" required autocomplete="address-line1" class="form-control">
+
+      <label class="required" for="cep">CEP</label>
+      <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="00000-000" required 
+             pattern="\d{5}-\d{3}" aria-describedby="cep-hint" class="form-control">
+      <div id="cep-hint" class="note">Formato: 00000-000</div>
+
+      <label class="required" for="cidade">Cidade</label>
+      <input id="cidade" name="cidade" type="text" required autocomplete="address-level2" class="form-control">
+
+      <label class="required" for="estado">Estado</label>
+      <select id="estado" name="estado" required autocomplete="address-level1" class="form-control">
+        <option value="" selected hidden>Selecione</option>
+        <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+        <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+        <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+        <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+        <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+        <option>SE</option><option>TO</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferências</legend>
+      <label for="tipo">Quero me cadastrar como</label>
+      <select id="tipo" name="tipo" class="form-control">
+        <option>Voluntário(a)</option>
+        <option>Doador(a)</option>
+        <option>Ambos</option>
+      </select>
+
+      <label for="interesses">Áreas de interesse</label>
+      <textarea id="interesses" name="interesses" rows="3" class="form-control" placeholder="Conte como gostaria de contribuir"></textarea>
+    </fieldset>
+
+    <p>
+      <button class="btn" type="submit">Enviar cadastro</button>
+      <button class="btn btn-ghost" type="reset">Limpar</button>
+    </p>
+  </form>
+</article>
+
+</main>
+<footer class="container" role="contentinfo">
+  <p>© 2025 Instituto Futuro Melhor · CNPJ 00.000.000/0001-00 · <a href="mailto:contato@institutofuturomelhor.org">contato@institutofuturomelhor.org</a></p>
+</footer>
+
+<div class="modal-backdrop" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="doar-title">
+    <h2 id="doar-title">Faça uma doação</h2>
+    <p class="u-mb-16">Contribua com nossa missão. Escolha um valor e forma de pagamento.</p>
+    <div class="row u-mb-16">
+      <div class="col-12 col-sm-6"><button class="btn">R$ 20</button></div>
+      <div class="col-12 col-sm-6"><button class="btn">R$ 50</button></div>
+      <div class="col-12 col-sm-6"><button class="btn">R$ 100</button></div>
+      <div class="col-12 col-sm-6"><button class="btn btn-ghost">Outro valor</button></div>
+    </div>
+    <button class="btn" data-close-modal>Fechar</button>
+  </div>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/mask.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

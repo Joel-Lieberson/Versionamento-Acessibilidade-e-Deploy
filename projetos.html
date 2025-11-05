@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma social — HTML5 + CSS3 com design system, grid e componentes.">
+  <title>Projetos sociais — Instituto Futuro Melhor</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="container navbar">
+    <a class="brand" href="index.html">Instituto Futuro Melhor</a>
+    <button class="hamburger" aria-label="Abrir menu" data-burger>☰</button>
+    <nav class="menu" data-menu aria-label="Principal">
+      <a href="index.html" class="">Início</a>
+      <div class="menu-item">
+        <a href="projetos.html" class="active" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
+        <div class="submenu" role="menu">
+          <a role="menuitem" href="projetos.html#mentoria">Mentoria Jovem</a>
+          <a role="menuitem" href="projetos.html#feira">Feira Solidária</a>
+          <a role="menuitem" href="projetos.html#inclusao">Inclusão Digital</a>
+        </div>
+      </div>
+      <a href="cadastro.html" class="">Cadastro</a>
+      <a href="#" data-open-modal class="btn btn-secondary">Quero doar</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+
+<article aria-labelledby="proj-title">
+  <header>
+    <h1 id="proj-title">Projetos sociais</h1>
+    <p class="note">Conheça iniciativas ativas e como você pode apoiar.</p>
+  </header>
+  <section>
+    <h2>Voluntariado</h2>
+    <div class="cards">
+      <div class="card project-card">
+        <img src="assets/images/aula.png" alt="Mentoria de jovens" width="480" height="320">
+        <h3 id="mentoria">Mentoria Jovem</h3>
+        <div class="meta"><span class="badge">Educação</span><span class="badge">Juventude</span></div>
+        <p>Aulas de reforço escolar e orientação de carreira para adolescentes.</p>
+      </div>
+      <div class="card project-card">
+        <img src="assets/images/feira.png" alt="Feira solidária" width="480" height="320">
+        <h3 id="feira">Feira Solidária</h3>
+        <div class="meta"><span class="badge">Assistência</span><span class="badge">Comunidade</span></div>
+        <p>Doação de alimentos e serviços básicos às famílias cadastradas.</p>
+      </div>
+      <div class="card project-card">
+        <img src="assets/images/tec.png" alt="Inclusão digital" width="480" height="320">
+        <h3 id="inclusao">Inclusão Digital</h3>
+        <div class="meta"><span class="badge">Tecnologia</span><span class="badge">Habilidades</span></div>
+        <p>Oficinas de tecnologia para promover habilidades do futuro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Como doar</h2>
+    <p>Você pode contribuir com doações financeiras ou itens essenciais (alimentos, material escolar e higiene). Entre em contato pelo <a href="mailto:doe@institutofuturomelhor.org">doe@institutofuturomelhor.org</a> ou clique em <a href="#" data-open-modal>Quero doar</a>.</p>
+  </section>
+</article>
+
+</main>
+<footer class="container" role="contentinfo">
+  <p>© 2025 Instituto Futuro Melhor · CNPJ 00.000.000/0001-00 · <a href="mailto:contato@institutofuturomelhor.org">contato@institutofuturomelhor.org</a></p>
+</footer>
+
+<div class="modal-backdrop" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="doar-title">
+    <h2 id="doar-title">Faça uma doação</h2>
+    <p class="u-mb-16">Contribua com nossa missão. Escolha um valor e forma de pagamento.</p>
+    <div class="row u-mb-16">
+      <div class="col-12 col-sm-6"><button class="btn">R$ 20</button></div>
+      <div class="col-12 col-sm-6"><button class="btn">R$ 50</button></div>
+      <div class="col-12 col-sm-6"><button class="btn">R$ 100</button></div>
+      <div class="col-12 col-sm-6"><button class="btn btn-ghost">Outro valor</button></div>
+    </div>
+    <button class="btn" data-close-modal>Fechar</button>
+  </div>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/mask.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
